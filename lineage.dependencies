@@ -1,7 +1,7 @@
 [
   {
         "remote": "github",
-        "repository": "EAZYBLACK/proprietary_vendor_xiaomi_devices",
+        "repository": "EAZYBLACK/proprietary_vendor_xiaomi_garden_blossom",
         "target_path": "vendor/xiaomi/garden",
         "branch": "garden-11"
   }
