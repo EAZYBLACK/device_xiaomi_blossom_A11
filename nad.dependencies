@@ -1,8 +1,0 @@
-[
-  {
-        "remote": "github",
-        "repository": "Mayuri-Chan/proprietary_vendor_xiaomi_garden",
-        "target_path": "vendor/xiaomi/garden",
-        "branch": "11"
-  }
-]
