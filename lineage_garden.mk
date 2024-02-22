@@ -15,10 +15,15 @@
 #
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 
-# Inherit from LOS vendor
+# Inherit from device makefile.
+$(call inherit-product, device/xiaomi/blossom/device.mk)
+
+# Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Some build flags
@@ -28,18 +33,15 @@ TARGET_USES_BLUR := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
-# Inherit from garden device makefile
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_garden
+PRODUCT_NAME := lineage_blossom
 PRODUCT_DEVICE := garden
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := xiaomi
 
 # Build info
 TARGET_VENDOR := xiaomi
-TARGET_VENDOR_PRODUCT_NAME := garden
+TARGET_VENDOR_PRODUCT_NAME := blossom
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.211001.001.A1 7641976 release-keys"
 
