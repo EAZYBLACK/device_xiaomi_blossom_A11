@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit from Nusantara vendor
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+# Inherit from LOS vendor
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Official tag
 NAD_BUILD_TYPE := OFFICIAL
@@ -35,7 +35,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_garden
+PRODUCT_NAME := lineage_garden
 PRODUCT_DEVICE := garden
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := xiaomi
