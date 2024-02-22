@@ -18,11 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit from Nusantara vendor
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
-
-# Official tag
-NAD_BUILD_TYPE := OFFICIAL
+# Inherit from LOS vendor
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Some build flags
 TARGET_BOOT_ANIMATION_RES := 720
