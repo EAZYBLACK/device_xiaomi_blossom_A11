@@ -141,7 +141,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/com.mediatek.wfo.legacy.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.wfo.legacy.xml
 
 PRODUCT_PACKAGES += \
-    ImsInit
+    ImsInit \
+    IMSFix
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries-trustonic.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-trustonic.txt
